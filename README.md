@@ -1,53 +1,70 @@
-# Podcast Attention and Welfare  
-**Code and Data for MSc Dissertation (University of Nottingham, 2025)**  
-This repository contains the SQL and Python scripts, as well as supporting data samples, used in the MSc dissertation:  
-**“Podcast Attention and Welfare – A Multinomial Logit Estimation of Consumer Choice.”**
+# The Economics of Podcast Attention
 
-## Overview
-The project investigates podcast consumption choices and their welfare implications using a discrete choice modelling framework.  
-Key research questions include:  
-1. **Baseline drivers:** To what extent do content quality, time cost, and sponsorship shape podcast consumption?  
-2. **Heterogeneity:** How do demographic factors (age, gender, education, income, frequency) moderate these sensitivities?  
-3. **Welfare:** How does sponsorship affect consumer surplus, on average and across groups?  
+Reproducibility repository for the MSc dissertation **“The Economics of
+Podcast Attention: Multinomial Logit Estimation and Welfare Implications.”**
 
-## Methods
-- **Data construction:**  
-  - Pew Research Center survey (simulated listener profiles).  
-  - ListenNotes podcast metadata (mapped to Pew 12-category taxonomy via *Primary Bucket* approach).  
-- **Cleaning & transformation:** SQL pipelines in BigQuery (`sql/` folder).  
-- **Estimation:** Multinomial Logit (MNL) with weighted maximum likelihood.  
-- **Heterogeneity:** Interaction terms between podcast attributes and demographics.  
-- **Welfare analysis:** Log-sum-exp consumer surplus; counterfactual scenarios (Sponsor=0; sponsorship intensity scaling).  
+This first release preserves the analysis assessed in the dissertation. It
+organises the original Pew-based user simulation, BigQuery panel construction,
+choice simulation and multinomial-logit estimation without silently changing
+the model or its reported results.
 
+## Release status
 
-##  Repository Structure
+**Current target:** `v1.0-thesis-replication`
 
-| Folder / File      | Description                                      |
-|--------------------|--------------------------------------------------|
-| 📁 `sql/`          | BigQuery scripts for data cleaning & panel setup |
-| 📁 `python/`       | Estimation & welfare analysis scripts            |
-| 📁 `data/`         | Sample anonymised / simulated datasets           |
-| 📁 `results/`      | Model summaries, figures & tables                |
-| 📄 `README.md`     | Project documentation                            |
-| 📄 `requirements.txt` | Python dependencies                          |
+- The code is being recovered from the original Word and notebook records.
+- The original specification is preserved, including decisions that will be
+  reassessed in a later corrected-analysis release.
+- A successful end-to-end rerun has not yet been claimed.
+- The repository does not contain the licensed Listen Notes record-level data.
 
+## Research question
 
-## Reproducibility  
-- **SQL**: Scripts designed for Google BigQuery.  
-- **Python**: Requires Python 3.9+; see `requirements.txt` for full list.  
-- **Data**: Only sample datasets are included here. Full metadata available via ListenNotes API; full Pew demographic distributions publicly available.  
+How do podcast popularity, the model's time-cost proxy and sponsorship status
+relate to simulated podcast choices and model-based welfare comparisons in a
+restricted choice environment?
 
+The listener records are synthetic. They use published Pew Research Center
+targets as simulation inputs and are not observed individual listening choices.
 
-## Limitations  
-- Analysis relies on **simulated choices**, not directly observed selections.  
-- MNL entails the **IIA assumption**, which may be restrictive given similar podcasts.  
-- Sponsorship treated as binary; no differentiation by ad type, length, or intensity.  
-- No explicit outside option modelled, so the focus is on **ΔCS** rather than absolute CS values.  
+## Repository map
 
+```text
+podcast-choice-welfare/
+├── docs/                  # Scope, data access and code provenance
+├── notebooks/             # Pew simulation and original estimation runs
+├── sql/                   # BigQuery preparation and choice-set scripts
+├── results/original/      # Results reported by the assessed dissertation
+├── tools/                 # One-off provenance/extraction utilities
+└── archive/source-notes/  # Inventory only; Word chat transcripts stay out
+```
 
-## Citation  
-If using this work, please cite:  
+## Intended execution order
 
-**Arslan, B. (2025).** *Podcast Attention and Welfare – A Multinomial Logit Estimation of Consumer Choice.* MSc Dissertation, University of Nottingham.  
+1. Run `notebooks/01_pew_user_simulation.ipynb` to create the synthetic user
+   table.
+2. Obtain the source podcast metadata under the provider's terms and create the
+   primary-bucket field described in `docs/DATA_ACCESS.md`.
+3. Run `sql/01_prepare_panel.sql` in BigQuery.
+4. Run `sql/02_simulate_choices.sql`.
+5. Run `sql/03_build_interactions.sql`.
+6. Run `notebooks/02_run_all_models.ipynb` to reproduce the final model
+   registry used for the dissertation tables.
 
+The exact cloud table names used in the dissertation are retained for
+provenance. A later portability pass will move them into configuration.
 
+The longer sequence of intermediate estimation attempts is retained under
+`notebooks/archive/` for audit, but it is not the recommended entry point.
+
+## Interpretation boundary
+
+This repository reproduces a simulation study. Its coefficients must not be
+presented as estimates from observed listener choices or as causal effects.
+The corrected-analysis release will document specification changes separately
+instead of rewriting the history of the assessed thesis.
+
+## Author
+
+Berken Arslan  
+MSc Economics and Data Science, University of Nottingham

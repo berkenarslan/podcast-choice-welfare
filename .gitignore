@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment and credentials
+.env
+.env.*
+*.json
+!*.schema.json
+!tools/*.json
+service-account*.json
+credentials*.json
+
+# Local data: never commit provider data or user-level extracts
+data/raw/
+data/interim/
+data/processed/
+*.numbers
+
+# Generated outputs
+outputs/
+*.zip
+
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
