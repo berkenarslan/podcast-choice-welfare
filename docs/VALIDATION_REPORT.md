@@ -13,12 +13,20 @@ Validation date: 2026-08-26
 - The assessed podcast metadata was checked locally: 500 records, 500 unique
   podcast identifiers, 38 source fields, and 11 non-empty primary buckets.
 - Contact/provider fields remain outside the repository.
+- The public synthetic listener file contains exactly 2,000 rows and is
+  deterministically regenerated from the submitted notebook's seed, target
+  values, draw order and column order.
+- The public metadata summaries contain no podcast-level records or contact
+  fields; primary-bucket counts sum to the 500-record assessed metadata sample.
 - The final model registry contains M1 plus M2V1–M2V8 and points to 94,690 rows
   and 1,921 retained users in the historical results record.
 - Historical table values were cross-checked between the submitted thesis and
   the consolidated results record.
 - Structural repository validation is available through
   `tools/validate_repository.py`.
+- Public data-package generation is available through
+  `tools/build_public_data_package.py` for users who separately hold the
+  licensed metadata export.
 
 ## Not yet verified
 

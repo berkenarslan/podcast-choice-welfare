@@ -1,0 +1,30 @@
+domain,category,source_value_pct,assessed_draw_probability,interpretation
+topic,Comedy,47,0.11604938271604938,Pew percentage among listeners; normalised for exclusive draw
+topic,Entertainment / Pop Culture / Arts,46,0.11358024691358025,Pew percentage among listeners; normalised for exclusive draw
+topic,Politics & Government,41,0.10123456790123457,Pew percentage among listeners; normalised for exclusive draw
+topic,Science & Technology,40,0.09876543209876543,Pew percentage among listeners; normalised for exclusive draw
+topic,History,40,0.09876543209876543,Pew percentage among listeners; normalised for exclusive draw
+topic,True Crime,34,0.08395061728395062,Pew percentage among listeners; normalised for exclusive draw
+topic,Self-Help & Relationships,32,0.07901234567901234,Pew percentage among listeners; normalised for exclusive draw
+topic,Money & Finance,31,0.07654320987654321,Pew percentage among listeners; normalised for exclusive draw
+topic,Religion & Spirituality,30,0.07407407407407407,Pew percentage among listeners; normalised for exclusive draw
+topic,Health & Fitness,27,0.06666666666666667,Pew percentage among listeners; normalised for exclusive draw
+topic,Sports,22,0.05432098765432099,Pew percentage among listeners; normalised for exclusive draw
+topic,Race & Ethnicity,15,0.037037037037037035,Pew percentage among listeners; normalised for exclusive draw
+frequency,Nearly every day,20,0.19801980198019803,Pew percentage among listeners
+frequency,A few times a week,22,0.21782178217821782,Pew percentage among listeners
+frequency,A few times a month,25,0.24752475247524752,Pew percentage among listeners
+frequency,Once a month,9,0.0891089108910891,Pew percentage among listeners
+frequency,Less often,25,0.24752475247524752,Pew percentage among listeners
+age,18–29,67,0.3435897435897436,group listening propensity; normalised for draw
+age,30–49,58,0.29743589743589743,group listening propensity; normalised for draw
+age,50–64,42,0.2153846153846154,group listening propensity; normalised for draw
+age,65+,28,0.14358974358974358,group listening propensity; normalised for draw
+gender,Male,51,0.5257731958762887,group listening propensity; normalised for draw
+gender,Female,46,0.4742268041237113,group listening propensity; normalised for draw
+education,High school or less,37,0.25,group listening propensity; normalised for draw
+education,Some college,49,0.3310810810810811,group listening propensity; normalised for draw
+education,College+,62,0.4189189189189189,group listening propensity; normalised for draw
+income,<30K,44,0.2972972972972973,group listening propensity; normalised for draw
+income,"30K–79,999",45,0.30405405405405406,group listening propensity; normalised for draw
+income,80K+,59,0.39864864864864863,group listening propensity; normalised for draw

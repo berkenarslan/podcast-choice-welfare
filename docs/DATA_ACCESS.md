@@ -17,6 +17,12 @@ dataset terms.
 
 Source and terms: <https://www.listennotes.com/podcast-datasets/>
 
+The provider's current Terms of Sale permit publication of analysis and
+aggregate statistics derived from the data, but prohibit distributing the
+Listen Notes records to third parties. They also request notification if
+research based on the data becomes public. Accordingly, this repository
+publishes aggregate tables only.
+
 Public repository policy:
 
 - do not commit the raw or cleaned record-level export;
@@ -26,10 +32,14 @@ Public repository policy:
 - provide schema documentation and acquisition instructions instead; and
 - keep local data under ignored `data/` directories.
 
+The synthetic listener file is not provider data and is published separately
+under `data/synthetic/` because it contains no observed individuals or personal
+identifiers.
+
 ## Expected local fields
 
 The original pipeline refers to podcast identifiers, a Pew-aligned primary
 bucket, sponsorship status, Listen Score, global rank, update frequency, genre
-labels and title. The corrected-analysis release will add an explicit schema
-and validation script before any public data example is supplied.
-
+labels and title. The local schema is documented in `DATA_SCHEMA.md`; the
+public package intentionally contains only the assessed synthetic listeners
+and non-identifying aggregate metadata summaries.

@@ -16,8 +16,8 @@ the model or its reported results.
 
 - The assessed code path has been recovered from the original Word and notebook
   records and mapped to repository files.
-- The original specification is preserved, including decisions that will be
-  reassessed in a later corrected-analysis release.
+- The original specification is preserved, including the methodological
+  limitations disclosed in the dissertation and repository documentation.
 - A successful end-to-end rerun has not yet been claimed.
 - The repository does not contain the licensed Listen Notes record-level data.
 - Values under `results/original/` are checked historical transcriptions, not
@@ -37,6 +37,7 @@ targets as simulation inputs and are not observed individual listening choices.
 ```text
 podcast-choice-welfare/
 ├── docs/                  # Scope, data access and code provenance
+├── data/                  # Synthetic listeners and permitted aggregates
 ├── notebooks/             # Pew simulation and original estimation runs
 ├── sql/                   # BigQuery preparation and choice-set scripts
 ├── results/original/      # Results reported by the assessed dissertation
@@ -62,6 +63,10 @@ provenance. A later portability pass will move them into configuration.
 The longer sequence of intermediate estimation attempts is retained under
 `notebooks/archive/` for audit, but it is not the recommended entry point.
 
+The exact seed-42 synthetic listener output and permitted aggregate metadata
+tables are included under `data/`. The purchased podcast-level Listen Notes
+records are not redistributed.
+
 Run `python tools/validate_repository.py` for structural checks that do not
 require access to the private BigQuery project or licensed metadata.
 
@@ -71,8 +76,8 @@ This repository reproduces a simulation study. Its coefficients must not be
 presented as estimates from observed listener choices or as causal effects.
 The reported log-sum welfare quantities are model utility units, not money and
 not an identified behavioural percentage.
-The corrected-analysis release will document specification changes separately
-instead of rewriting the history of the assessed thesis.
+Any later sensitivity or corrected analysis will remain separate instead of
+rewriting the history of the assessed thesis.
 
 ## Documentation
 

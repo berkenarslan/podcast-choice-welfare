@@ -46,6 +46,23 @@ def validate_results() -> None:
     )
 
 
+def validate_public_data() -> None:
+    users_path = ROOT / "data/synthetic/simulated_users_pew_seed42.csv"
+    with users_path.open(newline="", encoding="utf-8") as stream:
+        users = list(csv.DictReader(stream))
+    require(len(users) == 2000, "Synthetic listener row count drift")
+    forbidden = {"email", "rss", "title", "publisher", "listennotes_id"}
+    require(
+        forbidden.isdisjoint(users[0]),
+        "Provider/contact fields found in synthetic public data",
+    )
+
+    bucket_path = ROOT / "data/aggregates/primary_bucket_summary.csv"
+    with bucket_path.open(newline="", encoding="utf-8") as stream:
+        buckets = list(csv.DictReader(stream))
+    require(sum(int(row["count"]) for row in buckets) == 500, "Bucket totals drift")
+
+
 def validate_sql_disclosures() -> None:
     prepare = (ROOT / "sql/01_prepare_panel.sql").read_text(encoding="utf-8")
     choices = (ROOT / "sql/02_simulate_choices.sql").read_text(encoding="utf-8")
@@ -70,6 +87,7 @@ def validate_no_local_data() -> None:
 def main() -> None:
     validate_notebooks()
     validate_results()
+    validate_public_data()
     validate_sql_disclosures()
     validate_no_local_data()
     print("Repository structural validation passed.")
