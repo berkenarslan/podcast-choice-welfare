@@ -33,6 +33,12 @@ Validation date: 2026-08-26
 Until these checks pass, the repository must not claim end-to-end
 reproducibility.
 
+## Corrected branch note
+
+The corrected branch does not attempt to force the historical coefficients to
+reappear. Its seeded simulation-recovery output is documented separately in
+`CORRECTED_ANALYSIS_PROTOCOL.md` and `ASSESSED_VS_CORRECTED_RESULTS.md`.
+
 ## Deliberately preserved assessed issues
 
 See `REPLICATION_SCOPE.md`. In particular, the assessed `timecost_z` uses

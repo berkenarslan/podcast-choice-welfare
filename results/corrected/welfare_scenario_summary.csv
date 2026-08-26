@@ -1,0 +1,2 @@
+scenario,unit,mean_delta,median_delta,p05_delta,p95_delta
+Sponsor=0,log-sum utility units,0.14700497,0.14700548,0.14293722,0.15096729

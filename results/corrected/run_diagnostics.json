@@ -1,0 +1,13 @@
+{
+  "analysis_type": "simulation recovery; not empirical preference estimation",
+  "seed": 42,
+  "n_users": 2000,
+  "n_alternatives": 500,
+  "sponsor_share": 0.766,
+  "mean_topic_memberships": 4.0255,
+  "users_with_zero_topic_memberships": 11,
+  "optimizer_success": true,
+  "optimizer_message": "Optimization terminated successfully.",
+  "negative_log_likelihood": 12170.664618204308,
+  "gradient_norm": 1.0178729635069513e-08
+}

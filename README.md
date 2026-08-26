@@ -74,6 +74,15 @@ not an identified behavioural percentage.
 The corrected-analysis release will document specification changes separately
 instead of rewriting the history of the assessed thesis.
 
+## Corrected-analysis branch
+
+The `v2-corrected-analysis` branch reframes the work as a deterministic
+simulation-recovery exercise. It uses episode duration for time cost, preserves
+Pew topics as multi-response indicators, gives all scenario listeners the full
+500-podcast choice set, removes unsupported demographic claims, and uses one
+seeded RUM choice draw. See
+[`docs/CORRECTED_ANALYSIS_PROTOCOL.md`](docs/CORRECTED_ANALYSIS_PROTOCOL.md).
+
 ## Documentation
 
 - [`docs/REPLICATION_SCOPE.md`](docs/REPLICATION_SCOPE.md): boundary between

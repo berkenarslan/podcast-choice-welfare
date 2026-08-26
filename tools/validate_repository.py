@@ -45,6 +45,16 @@ def validate_results() -> None:
         "Historical values must not be labelled as rerun output",
     )
 
+    corrected = ROOT / "results/corrected/simulation_recovery_summary.csv"
+    if corrected.exists():
+        with corrected.open(newline="", encoding="utf-8") as stream:
+            corrected_rows = list(csv.DictReader(stream))
+        require(len(corrected_rows) == 4, "Corrected recovery table must have four terms")
+        require(
+            all(row["truth_inside_ci95"] == "True" for row in corrected_rows),
+            "Simulation truth not recovered within a model-based 95% interval",
+        )
+
 
 def validate_sql_disclosures() -> None:
     prepare = (ROOT / "sql/01_prepare_panel.sql").read_text(encoding="utf-8")

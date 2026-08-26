@@ -16,6 +16,7 @@ venv/
 *.json
 !*.schema.json
 !tools/*.json
+!results/corrected/*.json
 service-account*.json
 credentials*.json
 
@@ -29,9 +30,10 @@ data/processed/
 outputs/
 *.zip
 
+# Corrected aggregate outputs are committed selectively under results/corrected.
+
 # Operating systems and editors
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
-
