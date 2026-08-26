@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the dissertation and this software archive."
+title: "The Economics of Podcast Attention: thesis replication code"
+type: software
+authors:
+  - family-names: Arslan
+    given-names: Berken
+repository-code: "https://github.com/berkenarslan/podcast-choice-welfare"
+version: "0.2.0-assessed-reconstruction"

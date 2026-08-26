@@ -1,0 +1,10 @@
+model,K,LL,LL0_w,McFadden_R2,Adj_R2,N_users,N_rows,Mean_CS,Mean_Delta_CS,base_coefficients,interaction_coefficients,status
+M1_baseline,3,-8193.0880,-8327.3843,0.0161,0.0158,1921,94690,3.4774,0.2754,"ListenScore=0.2696; TimeCost=-0.0856; Sponsor=-0.3698",,reported_not_rerun
+M2V1,5,-8192.6584,-8327.3843,0.0162,0.0156,1921,94690,3.4777,0.2756,"ListenScore=0.2695; TimeCost=-0.1046; Sponsor=-0.3669","Sponsor×HighIncome=-0.0079; TimeCost×HighFreq=0.0689",reported_not_rerun
+M2V2,6,-8191.5617,-8327.3843,0.0163,0.0156,1921,94690,3.4776,0.2758,"ListenScore=0.2847; TimeCost=-0.1075; Sponsor=-0.3704","ListenScore×Young=-0.0550; TimeCost×HighIncome=0.0520; ListenScore×HighFreq=0.0146",reported_not_rerun
+M2V3,6,-8190.6480,-8327.3843,0.0164,0.0157,1921,94690,3.4774,0.2764,"ListenScore=0.2734; TimeCost=-0.1228; Sponsor=-0.4500","ListenScore×HighEdu=-0.0103; TimeCost×Young=0.0836; Sponsor×Female=0.1696",reported_not_rerun
+M2V4,6,-8189.4928,-8327.3843,0.0166,0.0158,1921,94690,3.4802,0.2736,"ListenScore=0.2692; TimeCost=-0.0509; Sponsor=-0.3134","TimeCost×HighEdu=-0.1025; ListenScore×HighIncome=0.0013; Sponsor×HighFreq=-0.2566",reported_not_rerun
+M2V5,5,-8192.2582,-8327.3843,0.0162,0.0156,1921,94690,3.4787,0.2742,"ListenScore=0.2696; TimeCost=-0.0829; Sponsor=-0.3194","Sponsor×HighEdu=-0.1211; TimeCost×Older=-0.0075",reported_not_rerun
+M2V6,5,-8192.3935,-8327.3843,0.0162,0.0156,1921,94690,3.4776,0.2756,"ListenScore=0.2499; TimeCost=-0.0858; Sponsor=-0.3701","ListenScore×Older=0.0004; ListenScore×Female=0.0399",reported_not_rerun
+M2V7,5,-8192.5098,-8327.3843,0.0162,0.0156,1921,94690,3.4767,0.2763,"ListenScore=0.2700; TimeCost=-0.0859; Sponsor=-0.4317","Sponsor×LowIncome=0.1285; Sponsor×HighIncome=0.0569",reported_not_rerun
+M2V8,4,-8191.4419,-8327.3843,0.0163,0.0158,1921,94690,3.4767,0.2762,"ListenScore=0.2694; TimeCost=-0.0857; Sponsor(Male ref)=-0.4495",Sponsor×Female=0.1692,reported_not_rerun

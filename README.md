@@ -1,5 +1,7 @@
 # The Economics of Podcast Attention
 
+[![Validate assessed reconstruction](https://github.com/berkenarslan/podcast-choice-welfare/actions/workflows/validate.yml/badge.svg)](https://github.com/berkenarslan/podcast-choice-welfare/actions/workflows/validate.yml)
+
 Reproducibility repository for the MSc dissertation **“The Economics of
 Podcast Attention: Multinomial Logit Estimation and Welfare Implications.”**
 
@@ -12,11 +14,14 @@ the model or its reported results.
 
 **Current target:** `v1.0-thesis-replication`
 
-- The code is being recovered from the original Word and notebook records.
+- The assessed code path has been recovered from the original Word and notebook
+  records and mapped to repository files.
 - The original specification is preserved, including decisions that will be
   reassessed in a later corrected-analysis release.
 - A successful end-to-end rerun has not yet been claimed.
 - The repository does not contain the licensed Listen Notes record-level data.
+- Values under `results/original/` are checked historical transcriptions, not
+  fresh rerun output.
 
 ## Research question
 
@@ -57,12 +62,29 @@ provenance. A later portability pass will move them into configuration.
 The longer sequence of intermediate estimation attempts is retained under
 `notebooks/archive/` for audit, but it is not the recommended entry point.
 
+Run `python tools/validate_repository.py` for structural checks that do not
+require access to the private BigQuery project or licensed metadata.
+
 ## Interpretation boundary
 
 This repository reproduces a simulation study. Its coefficients must not be
 presented as estimates from observed listener choices or as causal effects.
+The reported log-sum welfare quantities are model utility units, not money and
+not an identified behavioural percentage.
 The corrected-analysis release will document specification changes separately
 instead of rewriting the history of the assessed thesis.
+
+## Documentation
+
+- [`docs/REPLICATION_SCOPE.md`](docs/REPLICATION_SCOPE.md): boundary between
+  the assessed version and later corrections.
+- [`docs/CODE_MAP.md`](docs/CODE_MAP.md): source-to-repository provenance.
+- [`docs/DATA_SCHEMA.md`](docs/DATA_SCHEMA.md): local input and generated-table
+  contracts.
+- [`docs/RESULTS_LINEAGE.md`](docs/RESULTS_LINEAGE.md): where each published
+  historical result came from.
+- [`docs/VALIDATION_REPORT.md`](docs/VALIDATION_REPORT.md): checks completed and
+  checks still blocked by private cloud data.
 
 ## Author
 

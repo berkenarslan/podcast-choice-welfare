@@ -1,10 +1,12 @@
 # Original reported results
 
-This directory is reserved for machine-readable copies of the tables reported
+This directory contains machine-readable transcriptions of the tables reported
 in the assessed dissertation.
 
-The first repository part does not label manually transcribed values as fresh
-replication output. Tables will be added here only after they have been checked
-against the dissertation and linked to the exact model registry. New rerun
-outputs will be written to a separate generated-output directory.
+These files are **historical reported outputs**, not fresh replication output.
+They were cross-checked against the submitted dissertation and the consolidated
+results record. Their provenance and an important recovered-runner mismatch are
+documented in `../../docs/RESULTS_LINEAGE.md`.
 
+Any future clean rerun must write to `outputs/` and must not overwrite these
+files.

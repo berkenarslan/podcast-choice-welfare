@@ -1,0 +1,10 @@
+model,mean_cs_utility_units,mean_delta_cs_sponsor_zero_utility_units,delta_over_mean_cs,status
+M1_baseline,3.4774,0.2754,0.0792,reported_not_rerun
+M2V1,3.4777,0.2756,0.0792,reported_not_rerun
+M2V2,3.4776,0.2758,0.0793,reported_not_rerun
+M2V3,3.4774,0.2764,0.0795,reported_not_rerun
+M2V4,3.4802,0.2736,0.0786,reported_not_rerun
+M2V5,3.4787,0.2742,0.0788,reported_not_rerun
+M2V6,3.4776,0.2756,0.0792,reported_not_rerun
+M2V7,3.4767,0.2763,0.0795,reported_not_rerun
+M2V8,3.4767,0.2762,0.0794,reported_not_rerun
